@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Tutorial</title>
+        <script>
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "Paragraph has changed from Head.";
+            }
+        </script>
+    </head>
+
+    <body>
+        <h2>Demo JavasScript in Head</h2>
+
+        <p id="demo">A Paragraph</p>
+
+        <button type="button" onclick="myFunction()">Try it</button>
+        <button type="button" onclick="myFunction2()">Now try this</button>
+        <button type="button" onclick="hideThis()">Hide me</button>
+        <button type="button" onclick="displayThis()">Now show it</button>
+        <button type="button" onclick="printThis()">Print</button>
+        <button type="button" onclick="calculateThis()">Calculate</button>
+
+
+        <!--Link to an external file-->
+        <!--This can be done in HEAD or BODY-->
+        <!--You can add multiple external files-->
+
+        <script src="myScript.js"></script>
+
+        <script>
+            function myFunction2() {
+                document.getElementById("demo").innerHTML = "Paragraph has changed from Body.";
+            }
+
+            function hideThis() {
+                document.getElementById("demo").style.display = "none";
+            }
+
+            function displayThis() {
+                document.getElementById("demo").style.display = "block";
+            }
+
+            function calculateThis() {
+                document.getElementById("demo").innerHTML =
+                "The value of z is " + z + ".";
+            }
+
+            //The following approach is used only for testing 
+            document.write(5 + 6);
+
+            
+            //Another way of dealing with the document 
+            window.alert(5 + 6);
+
+            
+            //This approach is used in debugging 
+            console.log(5 + 6);
+
+            
+            //Printing a document
+            function printThis() {
+                window.print()
+            }
+            
+        </script>
+    </body>
+</html>
